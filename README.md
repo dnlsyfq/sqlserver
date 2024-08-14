@@ -5,6 +5,19 @@ SELECT TOP 1 PickupDate, CONVERT(DATE, PickupDate) AS DateOnly
 FROM table
 ```
 
+```
+SELECT
+  -- Select the date portion of StartDate
+  CONVERT(DATE, StartDate) as StartDate,
+  -- Measure how many records exist for each StartDate
+  COUNT(StartDate) as CountOfRows 
+FROM CapitalBikeShare 
+-- Group by the date portion of StartDate
+GROUP BY CONVERT(DATE, StartDate)
+-- Sort the results by the date portion of StartDate
+ORDER BY CONVERT(DATE, StartDate);
+```
+
 # DatePart , Hours
 
 ```
@@ -15,6 +28,9 @@ FROM table
 GROUP BY DATEPART(HOUR, PickupDate)
 ORDER BY COUNT(ID) DESC
 ```
+
+
+
 # DateName , Week
 
 ```
