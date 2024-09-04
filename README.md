@@ -1,4 +1,22 @@
+# Introduction
+
+```
+SELECT TOP(10) *
+FROM table
+
+//restricting the percent of rows returned
+SELECT TOP(10) PERCENT *
+FROM table 
+```
+
+
+
+
+
 # Convert
+
+
+
 
 ```
 SELECT TOP 1 PickupDate, CONVERT(DATE, PickupDate) AS DateOnly
