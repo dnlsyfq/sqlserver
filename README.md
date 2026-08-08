@@ -1,3 +1,15 @@
+# Unicode Char
+
+```
+non‐standard characters like ♍? These are called Unicode characters
+
+
+SELECT
+  *
+FROM User
+WHERE Zodiac = N'♍';
+```
+
 # Introduction
 
 ```
@@ -9,7 +21,23 @@ SELECT TOP(10) PERCENT *
 FROM table 
 ```
 
+# LIKE 
 
+```
+SELECT
+  *
+FROM User
+WHERE Name LIKE N'A%';
+```
+
+```
+The underscore wildcard (_) replaces exactly one character. If a particular row has a Name of Catherine or Katherine, it will be returned by the query.
+
+SELECT
+  *
+FROM User
+WHERE Name LIKE N'_atherine';
+```
 
 
 
