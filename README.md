@@ -39,6 +39,30 @@ FROM User
 WHERE Name LIKE N'_atherine';
 ```
 
+# Mathematics
+```
+SELECT
+  *
+FROM User
+WHERE (MonthlySalary * 12) > 50000;
+```
+
+# JOIN
+
+```
+SELECT
+  *
+FROM Person, Car
+WHERE Person.Id = Car.OwnerId;
+```
+
+```
+SELECT
+  *
+FROM Person
+JOIN Car
+  ON Person.Id = Car.OwnerId;
+```
 
 
 # Convert
